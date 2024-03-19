@@ -3,8 +3,8 @@ import { cleanEnv, num } from 'envalid';
 
 dotenv.config({ path: './.env' });
 
-const env = cleanEnv(process.env, {
+const environmentVariables = cleanEnv(process.env, {
   PORT: num()
 });
 
-export default env;
+export default environmentVariables;

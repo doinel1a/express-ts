@@ -1,12 +1,12 @@
 import express from 'express';
 
-import env from './lib/env';
+import environmentVariables from './lib/environment-variables';
 import log from './lib/logger';
 
-const PORT = env.PORT || 9876;
+const { PORT } = environmentVariables;
 
 const server = express();
 
-server.listen(PORT, () => {
+server.listen(PORT || 9876, () => {
   log.info(`SERVER LISTENING ON: http://localhost:${PORT}`);
 });

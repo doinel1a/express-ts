@@ -1,6 +1,7 @@
+import env from './lib/env';
 import express from 'express';
 
-const PORT = 9876;
+const PORT = env.PORT || 9876;
 
 const server = express();
 
